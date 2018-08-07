@@ -57,7 +57,7 @@
     </form>
     <ul>
       <li repeat.for="hobby of hobbies">
-        ${hobby}
+        ${$index + 1}: ${hobby}
         <button click.trigger="deleteHobby(hobby)">X</button>
       </li>
     </ul>

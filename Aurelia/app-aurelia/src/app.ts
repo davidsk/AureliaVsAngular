@@ -7,8 +7,8 @@ export class App {
   configureRouter(config: RouterConfiguration, router: Router) {
     config.title = "App-Aurelia";
     config.map([
-      {route: "", name: "home", title: "home", moduleId: "components/user", nav: true},
-      {route: ["about"], name: "about", title: "about", moduleId: "components/about", nav: true}
+      {route: "", name: "user", title: "User", moduleId: "components/user", nav: true},
+      {route: ["about"], name: "about", title: "About", moduleId: "components/about", nav: true}
     ]);
     this.router = router;
   }
