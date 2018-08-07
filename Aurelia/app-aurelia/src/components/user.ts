@@ -27,9 +27,9 @@ export class User {
     }
     this.hobbies = ["Write code", "Watch movies", "Listen to Movies"]
   
-    // this.dataService.getPosts().then((posts) => {
-    //   this.posts = posts;
-    // });
+    this.dataService.getPosts().then((posts) => {
+      this.posts = posts;
+    });
   }
 
   onClick(){
@@ -45,6 +45,7 @@ export class User {
     for(let i = 0; i < this.hobbies.length;i++){
       if(this.hobbies[i] == hobby){
         this.hobbies.splice(i, 1);
+        return;
       }
     }
   }

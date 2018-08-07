@@ -1,4 +1,8 @@
 <template>
-  <require from="components/user"></require>
-  <user></user>
+  <ul>
+    <li repeat.for="route of router.navigation">
+      <a href.bind="route.href">${route.title}</a>
+    </li>
+  </ul>
+  <router-view></router-view>
 </template>

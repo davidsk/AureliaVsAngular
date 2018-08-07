@@ -7,13 +7,13 @@ import { map, filter, catchError, mergeMap } from 'rxjs/operators';
 })
 export class DataService {
 
-  constructor(public http:Http) {
-    console.log("Data service connected!");
+  constructor(public http: Http) {
+    console.log('Data service connected!');
   }
 
-  getPosts(){
-    return this.http.get("https://jsonplaceholder.typicode.com/posts")
+  getPosts() {
+    return this.http.get('https://jsonplaceholder.typicode.com/posts')
     .pipe(
-      map(response => response.json()))
+      map(response => response.json()));
   }
 }

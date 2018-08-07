@@ -1,0 +1,3 @@
+Angular / Aurelia Notes
+
+angular adds components automatically / aurelia does not require components to be registered

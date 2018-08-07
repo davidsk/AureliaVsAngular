@@ -39,6 +39,7 @@
             "path": "node_modules/aurelia-cli/lib/resources/scripts/configure-bluebird.js",
             "env": "dev"
           },
+          "node_modules/whatwg-fetch/fetch.js",
           "node_modules/systemjs/dist/system.js"
         ],
         "dependencies": [
@@ -59,7 +60,12 @@
           "aurelia-path",
           "aurelia-polyfills",
           "aurelia-route-recognizer",
-          "aurelia-router",
+          {
+            "name": "aurelia-router",
+            "main": "aurelia-router",
+            "path": "../node_modules/aurelia-router/dist/amd",
+            "resources": []
+          },
           "aurelia-task-queue",
           "aurelia-templating",
           "aurelia-templating-binding",
@@ -90,7 +96,12 @@
             "path": "../node_modules/aurelia-fetch-client/dist/amd",
             "resources": []
           },
-          "whatwg-fetch"
+          {
+            "name": "aurelia-http-client",
+            "main": "aurelia-http-client",
+            "path": "../node_modules/aurelia-http-client/dist/amd",
+            "resources": []
+          }
         ]
       }
     ],
