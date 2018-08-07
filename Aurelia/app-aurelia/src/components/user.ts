@@ -1,3 +1,6 @@
+import { DataService } from 'services/data-service'
+import { autoinject } from 'aurelia-framework';
+@autoinject
 export class User {    
   name: string;
   age: number;
@@ -7,7 +10,7 @@ export class User {
   posts: Post[];
   isEdit:boolean = false;
     
-  constructor(/*private dataService: DataService*/) {
+  constructor(private dataService: DataService) {
     console.log("constructor ran...")  
   }
 
@@ -24,9 +27,9 @@ export class User {
     }
     this.hobbies = ["Write code", "Watch movies", "Listen to Movies"]
   
-    //this.dataService.getPosts().then((posts) => {
-    //  this.posts = posts;
-    //});
+    // this.dataService.getPosts().then((posts) => {
+    //   this.posts = posts;
+    // });
   }
 
   onClick(){
