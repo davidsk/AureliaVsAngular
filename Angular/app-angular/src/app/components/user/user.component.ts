@@ -52,6 +52,7 @@ export class UserComponent implements OnInit {
     for(let i = 0; i < this.hobbies.length;i++){
       if(this.hobbies[i] == hobby){
         this.hobbies.splice(i, 1);
+        return;
       }
     }
   }
